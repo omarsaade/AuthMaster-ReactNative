@@ -1,0 +1,16 @@
+https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
+
+
+
+
+In React Native, there are several places where you can store tokens on a device, depending on your specific use case and security requirements. Here are some examples:
+
+AsyncStorage: AsyncStorage is a simple, asynchronous, persistent, key-value storage system that is built into React Native. You can use AsyncStorage to store tokens on the device's local storage. This method is easy to use and is suitable for small amounts of data.
+
+SecureStore: SecureStore is a React Native module that provides a way to securely store sensitive data, such as authentication tokens, on the device. It uses the native keychain on iOS and Android's equivalent to store data. This method is more secure than AsyncStorage and is suitable for sensitive data.
+
+Redux store: If you are using Redux for state management in your React Native app, you can store tokens in the Redux store. This method allows you to easily access the token from any component that has access to the Redux store.
+
+Device Keychain: You can also store tokens in the device's keychain. This method is highly secure as the keychain is encrypted and protected by the device's passcode. However, it requires native code to access the keychain, so it's not as simple to implement as the other methods.
+
+It's important to note that no storage method is completely secure, and you should always consider the sensitivity of the data you are storing and the level of security required for your app.
